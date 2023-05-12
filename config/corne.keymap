@@ -59,15 +59,15 @@
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR |
-// | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-// | RST  |     |     |     |     |     |   |     |     |     |     | RST |      |
-//                          |     |     |     |   |     |     |     |
+// | BLDR |     |     |     |       |       |   |     |     |     |     |     | BLDR |
+// | BTCLR| BT0 | BT1 | BT2 |  BT3  |  BT4  |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
+// | RST  |     |     |     |RGB EFF|RGB TOG|   |     |     |     |     | RST |      |
+//                          |       |       |   |     |     |     |     |
                         bindings = <
-   &bootloader  &none        &none        &none        &none        &none               &none         &none         &none         &none         &none         &bootloader
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-   &sys_reset   &none        &none        &none        &none        &none               &none         &none         &none         &none         &none         &sys_reset
-                                                               &trans &none &trans   &trans &none &trans
+   &bootloader  &none        &none        &none        &none             &none               &none         &none         &none         &none         &none         &bootloader
+   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      &bt BT_SEL 4        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+   &sys_reset   &none        &none        &none        &rgb_ug RGB_EFF   &rgb_ug RGB_TOG     &none         &none         &none         &none         &none         &sys_reset
+                                                                     &trans &none &trans   &trans &none &trans
                         >;
                 };
         };
