@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <../boards/nrfmicro_13_52833.overlay>
+#include <../boards/shields/corne/boards/nice_nano.overlay>
 
 #define DEF 0
 #define LWR 1
